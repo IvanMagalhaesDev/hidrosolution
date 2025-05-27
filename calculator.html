@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Nutritiva - HidroSolution</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="#">HidroSolution</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Página Inicial</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Cálculos Anteriores</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Título -->
+    <div class="container text-center mt-4">
+        <h2 class="fw-bold">Bem-vindo(a), Vitória!</h2>
+    </div>
+
+    <!-- Banner -->
+    <div class="banner">
+        <img src="imagens/20240529_074631 (1).jpg" class="img-fluid" alt="Cultivo Hidropônico">
+    </div>
+
+    <!-- Formulário -->
+    <div class="container text-center mt-4">
+        <div class="form-container mx-auto p-4 bg-white rounded shadow">
+            <form id="formCalc">
+                <div class="mb-3">
+                    <label class="form-label">Condutividade atual (mS/cm):</label>
+                    <input type="number" id="condLida" class="form-control" required step="0.01">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Condutividade desejada (mS/cm):</label>
+                    <input type="number" id="condDesejada" class="form-control" required step="0.01">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Volume do reservatório (L):</label>
+                    <input type="number" id="volume" class="form-control" required step="0.01">
+                </div>
+
+                <button type="submit" class="btn btn-success w-100">Calcular</button>
+                
+            </form>
+        </div>
+    </div>
+
+    <!-- Histórico -->
+    <div class="container text-center mt-4">
+        <ul id="historicoCalculos" class="list-group mt-4 text-start"></ul>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="text-center text-muted mt-4 mb-4">
+        <p>© 2025 Copyright: <a href="https://plataformacidts.com">plataformacidts.com</a></p>
+        <p>Todos os Direitos Reservados</p>
+    </footer>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
